@@ -43,10 +43,6 @@
             button2 = new Button();
             button3 = new Button();
             dataGridView1 = new DataGridView();
-            button4 = new Button();
-            button5 = new Button();
-            comboBox2 = new ComboBox();
-            label7 = new Label();
             MemberId = new DataGridViewTextBoxColumn();
             FullName = new DataGridViewTextBoxColumn();
             PhoneNumber = new DataGridViewTextBoxColumn();
@@ -57,6 +53,12 @@
             MembershipStatus = new DataGridViewTextBoxColumn();
             Paymentstatus = new DataGridViewTextBoxColumn();
             Monthlyfee = new DataGridViewTextBoxColumn();
+            button4 = new Button();
+            button5 = new Button();
+            comboBox2 = new ComboBox();
+            label7 = new Label();
+            textBox5 = new TextBox();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -192,47 +194,6 @@
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // button4
-            // 
-            button4.Location = new Point(455, 378);
-            button4.Name = "button4";
-            button4.Size = new Size(96, 23);
-            button4.TabIndex = 15;
-            button4.Text = "View Details";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(566, 378);
-            button5.Name = "button5";
-            button5.Size = new Size(99, 23);
-            button5.TabIndex = 16;
-            button5.Text = "Edit Member";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // comboBox2
-            // 
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Paid,Outstanding" });
-            comboBox2.Location = new Point(544, 311);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 17;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(432, 319);
-            label7.Name = "label7";
-            label7.Size = new Size(89, 15);
-            label7.TabIndex = 18;
-            label7.Text = "Payment Status";
-            label7.Click += label7_Click;
-            // 
             // MemberId
             // 
             MemberId.HeaderText = "Member ID";
@@ -283,11 +244,72 @@
             Monthlyfee.HeaderText = "Monthly Fee";
             Monthlyfee.Name = "Monthlyfee";
             // 
+            // button4
+            // 
+            button4.Location = new Point(455, 378);
+            button4.Name = "button4";
+            button4.Size = new Size(96, 23);
+            button4.TabIndex = 15;
+            button4.Text = "View Details";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(566, 378);
+            button5.Name = "button5";
+            button5.Size = new Size(99, 23);
+            button5.TabIndex = 16;
+            button5.Text = "Edit Member";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // comboBox2
+            // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Paid,Outstanding" });
+            comboBox2.Location = new Point(544, 311);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(121, 23);
+            comboBox2.TabIndex = 17;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(432, 319);
+            label7.Name = "label7";
+            label7.Size = new Size(89, 15);
+            label7.TabIndex = 18;
+            label7.Text = "Payment Status";
+            label7.Click += label7_Click;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(771, 378);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(125, 23);
+            textBox5.TabIndex = 19;
+            textBox5.Text = "Search By Name or ID";
+            // 
+            // button6
+            // 
+            button6.Location = new Point(913, 378);
+            button6.Name = "button6";
+            button6.Size = new Size(53, 23);
+            button6.TabIndex = 20;
+            button6.Text = "Search";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1054, 547);
+            Controls.Add(button6);
+            Controls.Add(textBox5);
             Controls.Add(label7);
             Controls.Add(comboBox2);
             Controls.Add(button5);
@@ -346,5 +368,7 @@
         private DataGridViewTextBoxColumn MembershipStatus;
         private DataGridViewTextBoxColumn Paymentstatus;
         private DataGridViewTextBoxColumn Monthlyfee;
+        private TextBox textBox5;
+        private Button button6;
     }
 }

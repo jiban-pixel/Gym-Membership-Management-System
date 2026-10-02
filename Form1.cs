@@ -408,6 +408,39 @@ $"${member.Membership.MonthlyFee:F2}"
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string searchText = textBox5.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                RefreshMemberGrid();
+                return;
+            }
+
+            dataGridView1.Rows.Clear();
+
+            foreach (Member member in gymManager.Members)
+            {
+                if (member.FullName.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
+                    member.MemberId.ToString().Contains(searchText))
+                {
+                    dataGridView1.Rows.Add(
+                        member.MemberId,
+                        member.FullName,
+                        member.PhoneNumber,
+                        member.Email,
+                        member.MembershipType,
+                        member.Membership.StartDate.ToShortDateString(),
+                        member.Membership.ExpiryDate.ToShortDateString(),
+                        GetMembershipStatus(member),
+                        member.Membership.PaymentStatus,
+                        $"${member.Membership.MonthlyFee:F2}"
+                    );
+                }
+            }
+        }
     }
 
 }
