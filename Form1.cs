@@ -208,13 +208,15 @@ namespace GYMMEMBERSHIPMANAGEMENTSYSTEM
             foreach (Member member in gymManager.Members)
             {
                 dataGridView1.Rows.Add(
-    member.MemberId,
-    member.FullName,
-    member.PhoneNumber,
-    member.Email,
-    member.MembershipType,
-    $"${member.Membership.MonthlyFee:F2}"
-);
+                    member.MemberId,
+                    member.FullName,
+                    member.PhoneNumber,
+                    member.Email,
+                    member.MembershipType,
+                    member.Membership.StartDate.ToShortDateString(),
+                    member.Membership.ExpiryDate.ToShortDateString(),
+                    $"${member.Membership.MonthlyFee:F2}"
+                );
             }
         }
 

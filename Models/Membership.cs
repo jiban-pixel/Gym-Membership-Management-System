@@ -5,6 +5,7 @@
         public string MembershipType { get; set; }
         public decimal MonthlyFee { get; set; }
         public DateTime StartDate { get; set; }
+        public DateTime ExpiryDate { get; set; }
 
         public Membership(
             string membershipType,
@@ -14,11 +15,20 @@
             MembershipType = membershipType;
             MonthlyFee = monthlyFee;
             StartDate = startDate;
+
+            // Membership is valid for 1 year
+            ExpiryDate = startDate.AddYears(1);
         }
 
         public bool IsActive()
         {
-            return StartDate <= DateTime.Today;
+            return StartDate <= DateTime.Today &&
+                   DateTime.Today <= ExpiryDate;
+        }
+
+        public bool IsExpired()
+        {
+            return DateTime.Today > ExpiryDate;
         }
 
         public decimal GetAnnualFee()

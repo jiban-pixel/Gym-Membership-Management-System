@@ -43,14 +43,16 @@
             button2 = new Button();
             button3 = new Button();
             dataGridView1 = new DataGridView();
+            button4 = new Button();
+            button5 = new Button();
             MemberId = new DataGridViewTextBoxColumn();
-            Monthlyfee = new DataGridViewTextBoxColumn();
             FullName = new DataGridViewTextBoxColumn();
             PhoneNumber = new DataGridViewTextBoxColumn();
             Email = new DataGridViewTextBoxColumn();
             MembershipType = new DataGridViewTextBoxColumn();
-            button4 = new Button();
-            button5 = new Button();
+            StartDate = new DataGridViewTextBoxColumn();
+            ExpiryDate = new DataGridViewTextBoxColumn();
+            Monthlyfee = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -178,43 +180,13 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.AppWorkspace;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MemberId, Monthlyfee, FullName, PhoneNumber, Email, MembershipType });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MemberId, FullName, PhoneNumber, Email, MembershipType, StartDate, ExpiryDate, Monthlyfee });
             dataGridView1.GridColor = SystemColors.Window;
-            dataGridView1.Location = new Point(57, 427);
+            dataGridView1.Location = new Point(2, 424);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(646, 126);
+            dataGridView1.Size = new Size(844, 121);
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // MemberId
-            // 
-            MemberId.HeaderText = "Member ID";
-            MemberId.Name = "MemberId";
-            // 
-            // Monthlyfee
-            // 
-            Monthlyfee.HeaderText = "Monthly Fee";
-            Monthlyfee.Name = "Monthlyfee";
-            // 
-            // FullName
-            // 
-            FullName.HeaderText = "Full Name";
-            FullName.Name = "FullName";
-            // 
-            // PhoneNumber
-            // 
-            PhoneNumber.HeaderText = "Phone Number";
-            PhoneNumber.Name = "PhoneNumber";
-            // 
-            // Email
-            // 
-            Email.HeaderText = "Email";
-            Email.Name = "Email";
-            // 
-            // MembershipType
-            // 
-            MembershipType.HeaderText = "Membership Type";
-            MembershipType.Name = "MembershipType";
             // 
             // button4
             // 
@@ -236,11 +208,51 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
+            // MemberId
+            // 
+            MemberId.HeaderText = "Member ID";
+            MemberId.Name = "MemberId";
+            // 
+            // FullName
+            // 
+            FullName.HeaderText = "Full Name";
+            FullName.Name = "FullName";
+            // 
+            // PhoneNumber
+            // 
+            PhoneNumber.HeaderText = "Phone Number";
+            PhoneNumber.Name = "PhoneNumber";
+            // 
+            // Email
+            // 
+            Email.HeaderText = "Email";
+            Email.Name = "Email";
+            // 
+            // MembershipType
+            // 
+            MembershipType.HeaderText = "Membership Type";
+            MembershipType.Name = "MembershipType";
+            // 
+            // StartDate
+            // 
+            StartDate.HeaderText = "Start Date";
+            StartDate.Name = "StartDate";
+            // 
+            // ExpiryDate
+            // 
+            ExpiryDate.HeaderText = "Expiry Date";
+            ExpiryDate.Name = "ExpiryDate";
+            // 
+            // Monthlyfee
+            // 
+            Monthlyfee.HeaderText = "Monthly Fee";
+            Monthlyfee.Name = "Monthlyfee";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(782, 547);
+            ClientSize = new Size(943, 547);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(dataGridView1);
@@ -283,13 +295,15 @@
         private Button button2;
         private Button button3;
         private DataGridView dataGridView1;
+        private Button button4;
+        private Button button5;
         private DataGridViewTextBoxColumn MemberId;
-        private DataGridViewTextBoxColumn Monthlyfee;
         private DataGridViewTextBoxColumn FullName;
         private DataGridViewTextBoxColumn PhoneNumber;
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn MembershipType;
-        private Button button4;
-        private Button button5;
+        private DataGridViewTextBoxColumn StartDate;
+        private DataGridViewTextBoxColumn ExpiryDate;
+        private DataGridViewTextBoxColumn Monthlyfee;
     }
 }
