@@ -6,6 +6,7 @@
         public decimal MonthlyFee { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime ExpiryDate { get; set; }
+        public string PaymentStatus { get; set; } = "Outstanding";
 
         public Membership(
             string membershipType,
@@ -18,6 +19,8 @@
 
             // Membership is valid for 1 year
             ExpiryDate = startDate.AddYears(1);
+
+            PaymentStatus = "Outstanding";
         }
 
         public bool IsActive()

@@ -21,6 +21,13 @@ namespace GYMMEMBERSHIPMANAGEMENTSYSTEM
 
             comboBox1.SelectedIndex = 0;
 
+            // Add payment status options
+
+            comboBox2.Items.Clear();
+            comboBox2.Items.Add("Paid");
+            comboBox2.Items.Add("Outstanding");
+            comboBox2.SelectedIndex = 1;
+
             // Configure DataGridView
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ReadOnly = true;
@@ -119,7 +126,9 @@ namespace GYMMEMBERSHIPMANAGEMENTSYSTEM
                         membershipType
                     );
                 }
-
+                // Set Payment Status
+                member.Membership.PaymentStatus =
+    comboBox2.SelectedItem.ToString();
                 // Add member
                 gymManager.AddMember(member);
 
@@ -213,9 +222,10 @@ namespace GYMMEMBERSHIPMANAGEMENTSYSTEM
                     member.PhoneNumber,
                     member.Email,
                     member.MembershipType,
-                    member.Membership.StartDate.ToShortDateString(),
-                    member.Membership.ExpiryDate.ToShortDateString(),
-                    $"${member.Membership.MonthlyFee:F2}"
+                   member.Membership.StartDate.ToShortDateString(),
+member.Membership.ExpiryDate.ToShortDateString(),
+member.Membership.PaymentStatus,
+$"${member.Membership.MonthlyFee:F2}"
                 );
             }
         }
@@ -372,6 +382,16 @@ namespace GYMMEMBERSHIPMANAGEMENTSYSTEM
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

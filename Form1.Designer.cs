@@ -45,6 +45,8 @@
             dataGridView1 = new DataGridView();
             button4 = new Button();
             button5 = new Button();
+            comboBox2 = new ComboBox();
+            label7 = new Label();
             MemberId = new DataGridViewTextBoxColumn();
             FullName = new DataGridViewTextBoxColumn();
             PhoneNumber = new DataGridViewTextBoxColumn();
@@ -52,6 +54,7 @@
             MembershipType = new DataGridViewTextBoxColumn();
             StartDate = new DataGridViewTextBoxColumn();
             ExpiryDate = new DataGridViewTextBoxColumn();
+            Paymentstatus = new DataGridViewTextBoxColumn();
             Monthlyfee = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -180,11 +183,11 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.AppWorkspace;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MemberId, FullName, PhoneNumber, Email, MembershipType, StartDate, ExpiryDate, Monthlyfee });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MemberId, FullName, PhoneNumber, Email, MembershipType, StartDate, ExpiryDate, Paymentstatus, Monthlyfee });
             dataGridView1.GridColor = SystemColors.Window;
             dataGridView1.Location = new Point(2, 424);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(844, 121);
+            dataGridView1.Size = new Size(929, 121);
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -207,6 +210,27 @@
             button5.Text = "Edit Member";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
+            // 
+            // comboBox2
+            // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Paid,Outstanding" });
+            comboBox2.Location = new Point(544, 311);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(121, 23);
+            comboBox2.TabIndex = 17;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(432, 319);
+            label7.Name = "label7";
+            label7.Size = new Size(89, 15);
+            label7.TabIndex = 18;
+            label7.Text = "Payment Status";
+            label7.Click += label7_Click;
             // 
             // MemberId
             // 
@@ -243,6 +267,11 @@
             ExpiryDate.HeaderText = "Expiry Date";
             ExpiryDate.Name = "ExpiryDate";
             // 
+            // Paymentstatus
+            // 
+            Paymentstatus.HeaderText = "Payment Status";
+            Paymentstatus.Name = "Paymentstatus";
+            // 
             // Monthlyfee
             // 
             Monthlyfee.HeaderText = "Monthly Fee";
@@ -253,6 +282,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(943, 547);
+            Controls.Add(label7);
+            Controls.Add(comboBox2);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(dataGridView1);
@@ -297,6 +328,8 @@
         private DataGridView dataGridView1;
         private Button button4;
         private Button button5;
+        private ComboBox comboBox2;
+        private Label label7;
         private DataGridViewTextBoxColumn MemberId;
         private DataGridViewTextBoxColumn FullName;
         private DataGridViewTextBoxColumn PhoneNumber;
@@ -304,6 +337,7 @@
         private DataGridViewTextBoxColumn MembershipType;
         private DataGridViewTextBoxColumn StartDate;
         private DataGridViewTextBoxColumn ExpiryDate;
+        private DataGridViewTextBoxColumn Paymentstatus;
         private DataGridViewTextBoxColumn Monthlyfee;
     }
 }
