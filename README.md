@@ -122,15 +122,27 @@ If the JSON file does not exist, the application starts with an empty member lis
 
 How to Run
 
-1. Clone or download the repository.
-2. Open the solution in Visual Studio.
-3. Build the solution.
-4. Run the application.
-5. Enter the member information using the form.
-6. Select a membership type and payment status.
-7. Use the available buttons to manage members.
-8. Use Save to store member records in JSON format.
-9. Use Load to retrieve saved member records.
+1. Clone or download this repository from GitHub:
+    https://github.com/jiban-pixel/Gym-Membership-Management-System
+2. If the project was downloaded as a ZIP file and Windows shows a security warning:
+    * Right-click the downloaded ZIP file.
+    * Select Properties.
+    * If the Unblock option is displayed, tick Unblock.
+    * Click Apply and then OK.
+    * Extract the ZIP file.
+3. Open the extracted project folder.
+4. Open the .slnx solution file using Visual Studio.
+5. Allow Visual Studio to restore any required project dependencies.
+6. Build the solution using Build → Build Solution or press Ctrl + Shift + B.
+7. Run the application by clicking the green Start button or pressing F5.
+8. The Gym Membership Management System Windows Forms application will open.
+
+Notes
+
+* The application is designed to run using Visual Studio and .NET on Windows.
+* The application stores member data in a local members.json file when the Save function is used.
+* Use the Load function to restore previously saved member data.
+* If Windows or Visual Studio displays a security prompt for files downloaded from the internet, review the prompt and use the standard Unblock option described above rather than disabling Windows security features.
 
 Validation
 
