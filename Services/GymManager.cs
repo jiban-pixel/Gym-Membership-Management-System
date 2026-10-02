@@ -6,8 +6,17 @@ namespace GymMembershipManagementSystem.Services
     {
         private readonly List<Member> members = new List<Member>();
 
-        public IReadOnlyList<Member> Members => members.AsReadOnly();
+        public void SetMembers(List<Member> loadedMembers)
+        {
+            members.Clear();
 
+            foreach (Member member in loadedMembers)
+            {
+                members.Add(member);
+            }
+        }
+
+        public IReadOnlyList<Member> Members => members.AsReadOnly();
         public void AddMember(Member member)
         {
             if (member == null)

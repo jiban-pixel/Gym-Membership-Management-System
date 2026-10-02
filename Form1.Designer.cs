@@ -59,6 +59,8 @@
             label7 = new Label();
             textBox5 = new TextBox();
             button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -287,7 +289,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(771, 378);
+            textBox5.Location = new Point(858, 377);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(125, 23);
             textBox5.TabIndex = 19;
@@ -295,7 +297,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(913, 378);
+            button6.Location = new Point(989, 377);
             button6.Name = "button6";
             button6.Size = new Size(53, 23);
             button6.TabIndex = 20;
@@ -303,11 +305,33 @@
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
+            // button7
+            // 
+            button7.Location = new Point(680, 377);
+            button7.Name = "button7";
+            button7.Size = new Size(75, 23);
+            button7.TabIndex = 21;
+            button7.Text = "Save";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(767, 377);
+            button8.Name = "button8";
+            button8.Size = new Size(75, 23);
+            button8.TabIndex = 22;
+            button8.Text = "load";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1054, 547);
+            Controls.Add(button8);
+            Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(textBox5);
             Controls.Add(label7);
@@ -370,5 +394,7 @@
         private DataGridViewTextBoxColumn Monthlyfee;
         private TextBox textBox5;
         private Button button6;
+        private Button button7;
+        private Button button8;
     }
 }

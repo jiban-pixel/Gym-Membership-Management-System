@@ -9,6 +9,8 @@ namespace GYMMEMBERSHIPMANAGEMENTSYSTEM
     public partial class Form1 : Form
     {
         private readonly GymManager gymManager = new GymManager();
+        private readonly JsonStorageService jsonStorageService =
+    new JsonStorageService();
 
         public Form1()
         {
@@ -439,6 +441,54 @@ $"${member.Membership.MonthlyFee:F2}"
                         $"${member.Membership.MonthlyFee:F2}"
                     );
                 }
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                jsonStorageService.SaveMembers(gymManager.Members);
+
+                MessageBox.Show(
+                    "Members saved successfully.",
+                    "Save Complete",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    ex.Message,
+                    "Save Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Member> loadedMembers = jsonStorageService.LoadMembers();
+
+                gymManager.SetMembers(loadedMembers);
+
+                RefreshMemberGrid();
+
+                MessageBox.Show(
+                    "Members loaded successfully.",
+                    "Load Complete",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    ex.Message,
+                    "Load Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
     }
