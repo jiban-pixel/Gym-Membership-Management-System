@@ -54,6 +54,7 @@
             MembershipType = new DataGridViewTextBoxColumn();
             StartDate = new DataGridViewTextBoxColumn();
             ExpiryDate = new DataGridViewTextBoxColumn();
+            MembershipStatus = new DataGridViewTextBoxColumn();
             Paymentstatus = new DataGridViewTextBoxColumn();
             Monthlyfee = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -183,11 +184,11 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.AppWorkspace;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MemberId, FullName, PhoneNumber, Email, MembershipType, StartDate, ExpiryDate, Paymentstatus, Monthlyfee });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MemberId, FullName, PhoneNumber, Email, MembershipType, StartDate, ExpiryDate, MembershipStatus, Paymentstatus, Monthlyfee });
             dataGridView1.GridColor = SystemColors.Window;
-            dataGridView1.Location = new Point(2, 424);
+            dataGridView1.Location = new Point(-1, 414);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(929, 121);
+            dataGridView1.Size = new Size(1045, 121);
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -267,6 +268,11 @@
             ExpiryDate.HeaderText = "Expiry Date";
             ExpiryDate.Name = "ExpiryDate";
             // 
+            // MembershipStatus
+            // 
+            MembershipStatus.HeaderText = "MembershipStatus";
+            MembershipStatus.Name = "MembershipStatus";
+            // 
             // Paymentstatus
             // 
             Paymentstatus.HeaderText = "Payment Status";
@@ -281,7 +287,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(943, 547);
+            ClientSize = new Size(1054, 547);
             Controls.Add(label7);
             Controls.Add(comboBox2);
             Controls.Add(button5);
@@ -337,6 +343,7 @@
         private DataGridViewTextBoxColumn MembershipType;
         private DataGridViewTextBoxColumn StartDate;
         private DataGridViewTextBoxColumn ExpiryDate;
+        private DataGridViewTextBoxColumn MembershipStatus;
         private DataGridViewTextBoxColumn Paymentstatus;
         private DataGridViewTextBoxColumn Monthlyfee;
     }

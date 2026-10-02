@@ -33,7 +33,11 @@
         {
             return DateTime.Today > ExpiryDate;
         }
-
+        public bool IsAboutToExpire()
+        {
+            return !IsExpired() &&
+                   ExpiryDate <= DateTime.Today.AddDays(30);
+        }
         public decimal GetAnnualFee()
         {
             return MonthlyFee * 12;

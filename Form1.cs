@@ -224,10 +224,25 @@ namespace GYMMEMBERSHIPMANAGEMENTSYSTEM
                     member.MembershipType,
                    member.Membership.StartDate.ToShortDateString(),
 member.Membership.ExpiryDate.ToShortDateString(),
+GetMembershipStatus(member),
 member.Membership.PaymentStatus,
 $"${member.Membership.MonthlyFee:F2}"
                 );
             }
+        }
+        private string GetMembershipStatus(Member member)
+        {
+            if (member.Membership.IsExpired())
+            {
+                return "Expired";
+            }
+
+            if (member.Membership.IsAboutToExpire())
+            {
+                return "About to Expire";
+            }
+
+            return "Active";
         }
 
         private void ClearFields()
